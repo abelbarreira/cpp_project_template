@@ -29,7 +29,7 @@ catch_discover_tests("UnitTestFoo")
 catch_discover_tests("UnitTestBar")
 
 if(ENABLE_COVERAGE)
-    set(COVERAGE_MAIN "coverage")
+    set(COVERAGE_MAIN "coverage") # name of the target
     set(COVERAGE_EXCLUDES
         "${PROJECT_SOURCE_DIR}/app/*"
         "${PROJECT_SOURCE_DIR}/cmake/*"

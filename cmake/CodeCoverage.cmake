@@ -46,7 +46,7 @@ endif()
 
 find_program(GCOVR_PATH gcovr)
 
-set(COVERAGE_COMPILER_FLAGS "-g3 -O0 --coverage")
+set(COVERAGE_COMPILER_FLAGS "-g3 -O0 --coverage") # compile in debug move without optimization
 set(CMAKE_CXX_FLAGS_COVERAGE ${COVERAGE_COMPILER_FLAGS} FORCE)
 set(CMAKE_C_FLAGS_COVERAGE ${COVERAGE_COMPILER_FLAGS} FORCE)
 set(CMAKE_EXE_LINKER_FLAGS_COVERAGE "-lgcov" FORCE)
@@ -135,7 +135,7 @@ function(setup_target_for_coverage_gcovr_html)
         --json-summary
         --json-summary-pretty
         --html-theme
-        github.dark-green)
+        blue)
     set(GCOVR_HTML_CMD
         ${GCOVR_PATH}
         ${GCOVR_EXTRA_FLAGS}
@@ -145,10 +145,10 @@ function(setup_target_for_coverage_gcovr_html)
         --json-summary
         ${Coverage_NAME}/summary.json
         --json-summary-pretty
-        --cobertura
-        ${Coverage_NAME}/coverage.cobertura.xml
-        --cobertura-pretty
-        --decisions
+        # --cobertura
+        # ${Coverage_NAME}/coverage.cobertura.xml
+        # --cobertura-pretty
+        # --decisions
         -r
         ${BASEDIR}
         ${GCOVR_ADDITIONAL_ARGS}
