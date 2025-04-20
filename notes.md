@@ -43,3 +43,4 @@
     - [Settings->Pages](https://github.com/abelbarreira/cpp_project_template/settings/pages)
   - Then there is `.github/workflows/documentation.yml` which is executed whenever is created a new tag, as a new version or whenever we push in the main or master branch.
   - It is needed to configure `Read and write permissions` in [Settings->Actions](https://github.com/abelbarreira/cpp_project_template/settings/actions)
+  - The deployment can be seen in [github-pages deployments](https://github.com/abelbarreira/cpp_project_template/deployments/github-pages) in the link [github.io: cpp_project_template](https://abelbarreira.github.io/cpp_project_template/)
