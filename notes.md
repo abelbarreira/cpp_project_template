@@ -1,5 +1,7 @@
 # Notes
 
+- [cpp_project_template](https://github.com/abelbarreira/cpp_project_template)
+
 - **Clang-Tidy**:
   - [Formatter and Static Analyzer](README_install.md)
   - Clang-Tidy: **Static Linting** tool for your C/C++ code
@@ -33,3 +35,10 @@
   - It is using following format configuration `.cmake-format.yaml`
   - It is activated with `ENABLE_CMAKE_FORMAT`
   - Using function `add_cmake_format_target` in `cmake/Tools.cmake`
+
+- **GitHub Pages**:
+  - Once generated the Doxygen documentation in `docs/html` using the `docs` cmake target
+  - This folder can be updated to GitHub pages, in the `gh-pages` branch, and it will be as web host for this information
+  - For this, in the repository in GitHub we have to go to `Settings->Pages->Activated` and indicate to use `gh-pages` branch
+    - [Settings->Pages](https://github.com/abelbarreira/cpp_project_template/settings/pages)
+  - Then there is `.github/workflows/documentation.yml` which is executed whenever is created a new tag, as a new version or whenever we push in the main or master branch.
