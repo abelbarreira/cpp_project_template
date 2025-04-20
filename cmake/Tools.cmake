@@ -3,14 +3,17 @@ function(add_cmake_format_target)
         return()
     endif()
     set(ROOT_CMAKE_FILES "${CMAKE_SOURCE_DIR}/CMakeLists.txt")
+    # It will scan for every CMakeLists.txt under the root
     file(GLOB_RECURSE CMAKE_FILES_TXT "*/CMakeLists.txt")
+    # And for every cmake file under cmake
     file(GLOB_RECURSE CMAKE_FILES_C "cmake/*.cmake")
     list(
         FILTER
         CMAKE_FILES_TXT
         EXCLUDE
         REGEX
-        "${CMAKE_SOURCE_DIR}/(build|external)/.*")
+        "${CMAKE_SOURCE_DIR}/(build|external)/.*" # but excluding the ones in build and external folders
+    )
     set(CMAKE_FILES ${ROOT_CMAKE_FILES} ${CMAKE_FILES_TXT} ${CMAKE_FILES_C})
     find_program(CMAKE_FORMAT cmake-format)
     if(CMAKE_FORMAT)
@@ -24,8 +27,8 @@ function(add_cmake_format_target)
                 cmake-format
                 -c
                 ${CMAKE_SOURCE_DIR}/.cmake-format.yaml
-                -i
-                ${cmake_file})
+                -i # in-place reformatted file: This option tells to edit the file in place.
+                ${cmake_file}) # Formatting the files
         endforeach()
         add_custom_target(
             run_cmake_format
@@ -58,7 +61,8 @@ function(add_clang_format_target)
         CPP_FILES
         EXCLUDE
         REGEX
-        "${CMAKE_SOURCE_DIR}/(build|external)/.*")
+        "${CMAKE_SOURCE_DIR}/(build|external)/.*"
+    )# filter out all the files in build and external directory
     find_program(CLANGFORMAT clang-format)
     if(CLANGFORMAT)
         message(STATUS "Added Clang Format")
@@ -67,7 +71,7 @@ function(add_clang_format_target)
             COMMAND
                 ${Python3_EXECUTABLE}
                 ${CMAKE_SOURCE_DIR}/tools/run-clang-format.py ${CPP_FILES}
-                --in-place
+                --in-place # This option tells to edit the file in place.
             WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
             USES_TERMINAL)
     else()
