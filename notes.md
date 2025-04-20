@@ -42,3 +42,4 @@
   - For this, in the repository in GitHub we have to go to `Settings->Pages->Activated` and indicate to use `gh-pages` branch
     - [Settings->Pages](https://github.com/abelbarreira/cpp_project_template/settings/pages)
   - Then there is `.github/workflows/documentation.yml` which is executed whenever is created a new tag, as a new version or whenever we push in the main or master branch.
+  - It is needed to configure `Read and write permissions` in [Settings->Actions](https://github.com/abelbarreira/cpp_project_template/settings/actions)
