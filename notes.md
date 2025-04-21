@@ -106,3 +106,4 @@
     - `pre-commit install`, and
     - `pre-commit install-hooks`
   - And then do a commit that is doing the checks before to commit them
+  - In case they don't want to install the pre-commit tool on their side, then we can use `.github/workflows/pre-commit.yml`
