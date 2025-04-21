@@ -7,7 +7,7 @@
             // "--filename",
             // "${workspaceFolder}/app/test.json"
         ],
-        "externalConsole": true
+        "externalConsole": false
     },
     // "cmake.buildDirectory": "${workspaceFolder}/build-${buildKit}",
     "files.associations": {

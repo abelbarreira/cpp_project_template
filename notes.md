@@ -121,3 +121,7 @@
         -- Installing: /usr/local/lib/libLibBar.a
         ```
   - Then it is possible to run `main`
+
+- **CMake Extension: Debugging and Running**:
+  - In case we need to pass arguments to the module to debug, we can use `.vscode/settings.json` in `cmake.debugConfig`
+  - Also possible to use VSCode tasks for it
