@@ -151,6 +151,7 @@ endif()
 
 # INSTALL TARGETS
 
+# Destination: on Linux will be /user/local on Windows in Program Files on C drive
 install(
     TARGETS ${EXECUTABLE_NAME}
     ARCHIVE DESTINATION lib

@@ -2,7 +2,6 @@
 
 #include "nlohmann/json.hpp"
 
-
 #include "bar.h"
 
 /**

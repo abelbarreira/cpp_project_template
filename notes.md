@@ -107,3 +107,17 @@
     - `pre-commit install-hooks`
   - And then do a commit that is doing the checks before to commit them
   - In case they don't want to install the pre-commit tool on their side, then we can use `.github/workflows/pre-commit.yml`
+
+- **Install Command**:
+  - About how we can install our Executable or our Library in the computer as any other tool
+  - It is using `install()` command in `CMakeLists.txt`
+  - It will be created an `install` target
+  - It has to be run with admin rights with `sudo cmake --build . --target install`:
+        ```sh
+        Install the project...
+        -- Install configuration: "Debug"
+        -- Installing: /usr/local/bin/main
+        -- Installing: /usr/local/lib/libLibFoo.a
+        -- Installing: /usr/local/lib/libLibBar.a
+        ```
+  - Then it is possible to run `main`
