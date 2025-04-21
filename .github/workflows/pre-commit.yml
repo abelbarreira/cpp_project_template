@@ -12,10 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
-    # - uses: pre-commit/action@v2.0.0
-    - name: instal pre-commit
-      run: |
-        sudo apt install pre-commit
-    - name: pre-commit
-      run: |
-        pre-commit install && pre-commit install-hooks
+    - uses: pre-commit/action@v2.0.0
