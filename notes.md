@@ -125,3 +125,10 @@
 - **CMake Extension: Debugging and Running**:
   - In case we need to pass arguments to the module to debug, we can use `.vscode/settings.json` in `cmake.debugConfig`
   - Also possible to use VSCode tasks for it
+
+- **CMake Kits**:
+  - A Kit is just a Complier we want to set, since we might have several compiler versions installed
+  - Sometimes is relevant which version we need
+  - For this we cna use `.vscode/cmake-kits.json`
+  - If we want to use different kits on the same project, we can generate the results in different kits build folder with `// "cmake.buildDirectory": "${workspaceFolder}/build-${buildKit}",` in `.vscode/settings.json`
+  - To manage the kits use the command pallette with CTRl+P and entry CMake User-Local CMake Kits, etc and it is editing the file `/home/abr/snap/code/191/.local/share/CMakeTools/cmake-tools-kits.json`, where we can see the local installed in the computer
