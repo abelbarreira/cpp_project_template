@@ -136,7 +136,7 @@ function(setup_target_for_coverage_gcovr_html)
         --json-summary-pretty
         --html-theme
         github.dark-green
-        --gcov-ignore-errors=no_working_dir_found)
+        --gcov-ignore-errors=no_working_dir_found) # ABR added since workflow `.github/workflows/ubuntu.yml` failed
     set(GCOVR_HTML_CMD
         ${GCOVR_PATH}
         ${GCOVR_EXTRA_FLAGS}
