@@ -13,6 +13,13 @@
 using json = nlohmann::json;
 namespace fs = std::filesystem;
 
+/**
+ * @brief main
+ *
+ * @param argc
+ * @param argv
+ * @return int
+ */
 int main(int argc, char **argv)
 {
     std::cout << "JSON: " << NLOHMANN_JSON_VERSION_MAJOR << "."

@@ -1,5 +1,13 @@
 #pragma once
 
+/**
+ * @brief summing
+ *
+ * @tparam T
+ * @param number1
+ * @param number2
+ * @return T
+ */
 template <typename T>
 T summing(T number1, T number2)
 {
