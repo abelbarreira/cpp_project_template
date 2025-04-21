@@ -85,3 +85,13 @@
     - [Creating an Example Workflow](https://docs.github.com/en/actions/use-cases-and-examples/creating-an-example-workflow)
     - [GitHub Actions](https://github.com/actions) for automate your GitHub workflows
     - [Disable/Enabling workflows](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow?tool=webui)
+
+- **GitHub Pull Requests**:
+  - [Git Pull Request](https://www.geeksforgeeks.org/git-pull-request/)
+  - In GitLab is called Merge Request
+
+- **GitHub Actions** for Unit Testing and Code Coverage:
+  - Following workflows:
+    - [MAC OS](.github/workflows/macos.yml)
+    - [Ubuntu](.github/workflows/ubuntu.yml)
+    - [Windows](.github/workflows/windows.yml)
