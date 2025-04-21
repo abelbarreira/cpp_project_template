@@ -16,3 +16,6 @@ jobs:
     - name: instal pre-commit
       run: |
         sudo apt install pre-commit
+    - name: pre-commit
+      run: |
+        pre-commit install && pre-commit install-hooks
