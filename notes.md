@@ -95,3 +95,14 @@
     - [MAC OS](.github/workflows/macos.yml)
     - [Ubuntu](.github/workflows/ubuntu.yml)
     - [Windows](.github/workflows/windows.yml)
+
+- **Pre-Commit**:
+  - Using the tool of `pre-commit` is possible to force to others to do CLang o CMake Formats
+  - `pip install pre-commit` -> `pre-commit 4.2.0` after `source ~/.profile`
+  - `sudo apt install pre-commit` -> `pre-commit 2.17.0`
+  - Then we have to setup the pre-commit in our repository using `.pre-commit-config.yam`
+    - Those checks will be run whenever we do a commit
+  - For this we have to use
+    - `pre-commit install`, and
+    - `pre-commit install-hooks`
+  - And then do a commit that is doing the checks before to commit them
