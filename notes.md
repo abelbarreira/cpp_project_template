@@ -54,3 +54,33 @@
   - `gcovr --version`
   - Use the flag `ENABLE_COVERAGE`
   - Reports are generated in `./build/coverage`
+
+- **GitHub Actions**:
+  - [Understanding GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions):
+    - A **workflow** is a configurable automated process that will run one or more **jobs**.
+      - Workflows are defined by a **YAML** file checked in to your repository and will run when triggered by an event in your repository, or they can be triggered manually, or at a defined schedule
+      - Workflows are defined in the `.github/workflows` directory in a repository
+        - You can reference a workflow within another workflow.
+    - An **event** is a specific activity in a repository that triggers a workflow run:
+      - For example:
+        - Create a pull request
+        - Open an issue, or
+        - Push a commit to a repository
+      - You can also trigger a workflow to run on a **schedule** or **manually**.
+    - A **job** is a set of steps in a workflow that is executed on the same runner.
+      - Each step is:
+        - A **shell script** that will be executed, or
+        - An **action** that will be run
+      - Steps are executed in order and are dependent on each other
+      - Since each step is executed on the same runner, you can share data from one step to another
+      - You can configure a job's dependencies with other jobs
+      - By default, jobs have no dependencies and run in parallel
+      - When a job takes a dependency on another job, it waits for the dependent job to complete before running
+    - An **action** is a custom application for the **GitHub Actions platform** that performs a complex but frequently repeated task
+      - Use an action to help reduce the amount of repetitive code that you write in your workflow files
+    - A **runner** is a server that runs your workflows when they're triggered:
+      - Each runner can run a single job at a time
+      - Each workflow run executes in a fresh, newly-provisioned virtual machine
+    - [Creating an Example Workflow](https://docs.github.com/en/actions/use-cases-and-examples/creating-an-example-workflow)
+    - [GitHub Actions](https://github.com/actions) for automate your GitHub workflows
+    - [Disable/Enabling workflows](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow?tool=webui)
